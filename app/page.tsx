@@ -8,9 +8,7 @@ export default function Home() {
         <foo className="flex flex-col gap-8 row-start-2 justify-items-center">
           <h1>v̾i̾t̾r̾i̾o̾l̾i̾x̾</h1>
         </foo>
-        <p>i make music and code and music code
-
-        </p>
+        <p>i make music and code and music code</p>
         <p>my latest song <a
           href="https://soundcloud.com/vitriolix/haters"
           target="_blank">
@@ -82,6 +80,14 @@ export default function Home() {
         {/*    Go to nextjs.org →*/}
         {/*  </a>*/}
       </footer>
+      <Image
+        aria-hidden
+        src="https://www.svgrepo.com/show/535115/alien.svg"
+        alt="Globe icon"
+        width={16}
+        height={16}
+        hidden={true}
+      />
     </div>
 );
 }
