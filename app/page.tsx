@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
     <div
@@ -9,7 +7,7 @@ export default function Home() {
           v̾i̾t̾r̾i̾o̾l̾i̾x̾
         </h1>
         <p>i make music and code and music code</p>
-        <p>my latest song <a
+        <p>2024.09.30: my latest song is <a
           href="https://soundcloud.com/vitriolix/haters"
           target="_blank">
           <b>
@@ -80,14 +78,6 @@ export default function Home() {
         {/*    Go to nextjs.org →*/}
         {/*  </a>*/}
       </footer>
-      <Image
-        aria-hidden
-        src="https://www.svgrepo.com/show/535115/alien.svg"
-        alt="Globe icon"
-        width={16}
-        height={16}
-        hidden={true}
-      />
     </div>
 );
 }

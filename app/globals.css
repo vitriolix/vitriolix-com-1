@@ -7,18 +7,18 @@
 :root {
   background: rgb(255,181,110);
   /*background: radial-gradient(circle, rgba(255,181,110,0.186734068627451) 0%, rgba(2,0,36,1) 255%);*/
-  background: radial-gradient(circle, rgba(255,181,110,0.12) 0%, rgba(0,0,0,1) 255%);
+  background: radial-gradient(circle, rgba(255,181,110,0.12) 30%, rgba(0,0,0,1) 255%);
   /*--background: #ffffff;*/
   --foreground: #F05A28;
   /*--foreground: #E6823C;*/
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  /*@media (prefers-color-scheme: dark) {*/
+  /*  :root {*/
+  /*    --background: #0a0a0a;*/
+  /*    --foreground: #ededed;*/
+  /*  }*/
+  /*}*/
 
 body {
   color: var(--foreground);
