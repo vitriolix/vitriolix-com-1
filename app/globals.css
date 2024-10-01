@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  background: rgb(255,181,110);
+  /*background: radial-gradient(circle, rgba(255,181,110,0.186734068627451) 0%, rgba(2,0,36,1) 255%);*/
+  background: radial-gradient(circle, rgba(255,181,110,0.12) 0%, rgba(0,0,0,1) 255%);
+  /*--background: #ffffff;*/
+  --foreground: #F05A28;
+  /*--foreground: #E6823C;*/
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,4 +30,8 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+h1 {
+  font-size: 40px;
 }
