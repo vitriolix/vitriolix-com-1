@@ -19,6 +19,12 @@ export default function Home() {
         </p>
         <iframe width="100%" height="166" scrolling="no" frameBorder="no" allow="autoplay"
                 src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1926365390&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+
+        <hr/>
+
+        {/*<iframe allowFullScreen sandbox="allow-top-navigation allow-scripts allow-popups allow-popups-to-escape-sandbox"*/}
+        {/*        width="400" height="800"*/}
+        {/*        src="https://mastofeed.com/apiv2/feed?userurl=https%3A%2F%2Fmastodon.social%2Fusers%2Fvitriolix&theme=light&size=100&header=false&replies=false&boosts=false"></iframe>*/}
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
