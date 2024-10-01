@@ -7,7 +7,7 @@ export default function Home() {
           v̾i̾t̾r̾i̾o̾l̾i̾x̾
         </h1>
         <p>i make music and code and music code</p>
-        <p><em fontSize="3px">2024.09.30:</em> my latest song is <a
+        <p><em>2024.09.30:</em> my latest song is <a
           href="https://soundcloud.com/vitriolix/haters"
           target="_blank">
           <b>
