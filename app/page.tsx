@@ -5,9 +5,9 @@ export default function Home() {
     <div
       className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <foo className="flex flex-col gap-8 row-start-2 justify-items-center">
-          <h1>v̾i̾t̾r̾i̾o̾l̾i̾x̾</h1>
-        </foo>
+        <h1 className="flex flex-col gap-8 row-start-2 justify-items-center">
+          v̾i̾t̾r̾i̾o̾l̾i̾x̾
+        </h1>
         <p>i make music and code and music code</p>
         <p>my latest song <a
           href="https://soundcloud.com/vitriolix/haters"
