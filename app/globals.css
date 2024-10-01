@@ -33,10 +33,12 @@ body {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 120px;
 }
 
 em {
+  font-family: "Andale Mono";
+  /*font-family: "Source Code Pro";*/
   font-size: 12px;
   font-style: normal;
 }

@@ -4,12 +4,12 @@ export default function Home() {
       className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <h1 className="flex flex-col gap-8 row-start-2 justify-items-center">
-          v̾i̾t̾r̾i̾o̾l̾i̾x̾
+          ҉v҉i҉t҉r҉i҉o҉l҉i҉x҉
         </h1>
         <p>i make music and code and music code</p>
-        <p><em>2024.09.30:</em> my latest song is <a
-          href="https://soundcloud.com/vitriolix/haters"
-          target="_blank">
+        <p>
+          <em>[2024.09.30] </em>
+          my latest song is <a href="https://soundcloud.com/vitriolix/haters" target="_blank">
           <b>
             <i>
               Haters
