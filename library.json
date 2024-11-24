@@ -3,7 +3,7 @@
     {
       "id": "haters",
       "slug": "haters",
-      "artists":[
+      "artists": [
         {
           "id": "vitriolix"
         }
@@ -21,7 +21,7 @@
     {
       "id": "backache",
       "slug": "backache",
-      "artists":[
+      "artists": [
         {
           "id": "vtx"
         }
@@ -40,7 +40,7 @@
     {
       "id": "magnificent_quarters",
       "name": "Magnificent Quarters",
-      "artists":[
+      "artists": [
         {
           "id": "vitriolix"
         }
@@ -49,7 +49,7 @@
     {
       "id": "in_threes",
       "name": "In Threes",
-      "artists":[
+      "artists": [
         {
           "id": "vtx"
         }
@@ -58,7 +58,7 @@
     {
       "id": "the_beach",
       "name": "The Beach",
-      "artists":[
+      "artists": [
         {
           "id": "blue_vitriol"
         }
@@ -68,15 +68,23 @@
   "artists": [
     {
       "id": "vitriolix",
-      "name": "vitriolix"
+      "name": "vitriolix",
+      "slug": "vitriolix"
+    },
+    {
+      "id": "vtx",
+      "name": "VTX",
+      "slug": "vitriolix"
     },
     {
       "id": "blue_vitriol",
-      "name": "Blue Vitriol"
+      "name": "Blue Vitriol",
+      "slug": "blue-vitriol"
     },
     {
       "id": "port_replicator",
-      "name": "Port Replicator"
+      "name": "Port Replicator",
+      "slug": "port-replicator"
     }
   ]
 }

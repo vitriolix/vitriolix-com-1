@@ -20,7 +20,7 @@ export default function Home() {
 
         {library.songs.map((song, index) => (
           <p key={index} width="100%" height="166">
-            <a href={"https://soundcloud.com/vitriolix/" + song.slug}>{getArtistById(song.id).name} - {song.title} →</a>
+            <a href={"https://soundcloud.com/" + getArtistById(song.id).slug + "/" + song.slug}>{getArtistById(song.artists[0].id).name} - {song.title} →</a>
             <iframe width="500" height="166" scrolling="no" frameBorder="no" allow="autoplay" key={index}
                   src={"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + song.soundcloud_id + "&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"}></iframe>
           </p>
