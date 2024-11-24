@@ -1,6 +1,6 @@
 import library from "../library.json"
 
-function getArtistById(id: any) {
+function getArtistById(id: number) {
   for (const i in library.artists) {
     const artist = library.artists[i]
     if (artist.id == id) return artist
