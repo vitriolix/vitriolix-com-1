@@ -1,0 +1,82 @@
+{
+  "songs": [
+    {
+      "id": "haters",
+      "slug": "haters",
+      "artists":[
+        {
+          "id": "vitriolix"
+        }
+      ],
+      "tags": [
+        "idm",
+        "electro",
+        "electronic"
+      ],
+      "title": "Haters",
+      "album_id": "magnificent_quarters",
+      "track_number": 1,
+      "soundcloud_id": 1926365390
+    },
+    {
+      "id": "backache",
+      "slug": "backache",
+      "artists":[
+        {
+          "id": "vtx"
+        }
+      ],
+      "tags": [
+        "dnb",
+        "electronic"
+      ],
+      "title": "Backache",
+      "album_id": "backache",
+      "track_number": 1,
+      "soundcloud_id": 1932470609
+    }
+  ],
+  "albums": [
+    {
+      "id": "magnificent_quarters",
+      "name": "Magnificent Quarters",
+      "artists":[
+        {
+          "id": "vitriolix"
+        }
+      ]
+    },
+    {
+      "id": "in_threes",
+      "name": "In Threes",
+      "artists":[
+        {
+          "id": "vtx"
+        }
+      ]
+    },
+    {
+      "id": "the_beach",
+      "name": "The Beach",
+      "artists":[
+        {
+          "id": "blue_vitriol"
+        }
+      ]
+    }
+  ],
+  "artists": [
+    {
+      "id": "vitriolix",
+      "name": "vitriolix"
+    },
+    {
+      "id": "blue_vitriol",
+      "name": "Blue Vitriol"
+    },
+    {
+      "id": "port_replicator",
+      "name": "Port Replicator"
+    }
+  ]
+}

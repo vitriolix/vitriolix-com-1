@@ -1,38 +1,38 @@
+import library from "../library.json"
+
+function getArtistById(id) {
+  for (const i in library.artists) {
+    const artist = library.artists[i]
+    if (artist.id == id) return artist
+  }
+  return library.artists[0]
+}
 export default function Home() {
   return (
     <div
       className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <h1 className="flex flex-col gap-8 row-start-2 justify-items-center">
           ҉v҉i҉t҉r҉i҉o҉l҉i҉x҉
         </h1>
         <p>i make music and code and music code</p>
-        <p>
-          <em>[2024.09.30] </em>
-          my latest song is <a href="https://soundcloud.com/vitriolix/haters" target="_blank">
-          <b>
-            <i>
-              Haters
-            </i>
-          </b>
-        </a>
-        </p>
-        <iframe width="100%" height="166" scrolling="no" frameBorder="no" allow="autoplay"
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1926365390&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
-        <hr/>
-
-        {/*<iframe allowFullScreen sandbox="allow-top-navigation allow-scripts allow-popups allow-popups-to-escape-sandbox"*/}
-        {/*        width="400" height="800"*/}
-        {/*        src="https://mastofeed.com/apiv2/feed?userurl=https%3A%2F%2Fmastodon.social%2Fusers%2Fvitriolix&theme=light&size=100&header=false&replies=false&boosts=false"></iframe>*/}
+        {library.songs.map((song, index) => (
+          <p key={index} width="100%" height="166">
+            <a href={"https://soundcloud.com/vitriolix/" + song.slug}>{getArtistById(song.id).name} - {song.title} →</a>
+            <iframe width="500" height="166" scrolling="no" frameBorder="no" allow="autoplay" key={index}
+                  src={"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + song.soundcloud_id + "&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"}></iframe>
+          </p>
+        ))}
       </main>
+
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://mastodon.social/@vitriolix"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           <b>mastodon</b>
         </a>
         |
@@ -40,8 +40,7 @@ export default function Home() {
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://bsky.app/profile/vitriolix.bsky.social"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           <b>bluesky</b>
         </a>
         |
@@ -49,40 +48,11 @@ export default function Home() {
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://twitter.com/vitriolix"
           target="_blank"
-          rel="noopener noreferrer"
-        >
-          <b>twitter</b>
+          rel="noopener noreferrer">
+          <b>twitter (RIP)</b>
         </a>
-        {/*  <a*/}
-        {/*    className="flex items-center gap-2 hover:underline hover:underline-offset-4"*/}
-        {/*    href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"*/}
-        {/*    target="_blank"*/}
-        {/*    rel="noopener noreferrer"*/}
-        {/*  >*/}
-        {/*    <Image*/}
-        {/*      aria-hidden*/}
-        {/*      src="https://nextjs.org/icons/window.svg"*/}
-        {/*      alt="Window icon"*/}
-        {/*      width={16}*/}
-        {/*      height={16}*/}
-        {/*    />*/}
-        {/*    Examples*/}
-        {/*  </a>*/}
-        {/*  <a*/}
-        {/*    className="flex items-center gap-2 hover:underline hover:underline-offset-4"*/}
-        {/*    href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"*/}
-        {/*    target="_blank"*/}
-        {/*    rel="noopener noreferrer"*/}
-        {/*  >*/}
-        {/*    <Image*/}
-        {/*      aria-hidden*/}
-        {/*      src="https://nextjs.org/icons/globe.svg"*/}
-        {/*      alt="Globe icon"*/}
-        {/*      width={16}*/}
-        {/*      height={16}*/}
-        {/*    />*/}
-        {/*    Go to nextjs.org →*/}
-        {/*  </a>*/}
+        |
+        <p>copyright 2024</p>
       </footer>
     </div>
 );
