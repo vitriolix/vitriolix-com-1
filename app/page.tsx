@@ -1,5 +1,11 @@
 import library from "../library.json"
 
+function Log(props) {
+  console.log(props.message)
+  return ""
+}
+
+
 function getArtistById(id: string) {
   // console.log("artist id: " + id)
   for (const i in library.artists) {
@@ -20,11 +26,11 @@ export default function Home() {
         </h1>
         <p>i make <a href="https://soundcloud.com/vitriolix"><b>music</b></a> and <a href="https://github.com/vitriolix"><b>code</b> and music code</a></p>
 
-        {/*{console.log("about to dump songs")}*/}
+        <Log message={"about to dump songs"} />
         {library.songs.map((song, index) => (
           song.released &&
           <p key={index}>
-            {console.debug("  song:" + JSON.stringify(song, null, 2))}
+            <Log message={"  song:" + JSON.stringify(song, null, 2)} />
             <a href={"https://soundcloud.com/vitriolix/" + song.slug}>{getArtistById(song.artists[0].id).name}: {song.title} ({song.year}) →</a>
             <iframe width="500" height="166" scrolling="no" frameBorder="no" allow="autoplay" key={index}
                     src={"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + song.soundcloud_id + "&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"}></iframe>
