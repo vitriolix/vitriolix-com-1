@@ -1,6 +1,8 @@
 import library from "../library.json"
 
-function Log(props) {
+type AppProps = { message: string }
+
+function Log(props: AppProps) {
   console.log(props.message)
   return ""
 }
