@@ -3,6 +3,9 @@
     {
       "id": "haters",
       "slug": "haters",
+      "year": "2024",
+      "released": true,
+      "service": "soundcloud",
       "artists": [
         {
           "id": "vitriolix"
@@ -21,6 +24,9 @@
     {
       "id": "backache",
       "slug": "backache",
+      "year": "2024",
+      "released": true,
+      "service": "soundcloud",
       "artists": [
         {
           "id": "vtx"
@@ -34,12 +40,34 @@
       "album_id": "backache",
       "track_number": 1,
       "soundcloud_id": 1932470609
+    },
+    {
+      "id": "in_threes",
+      "slug": "in-threes",
+      "year": "2024",
+      "released": false,
+      "service": "soundcloud",
+      "artists": [
+        {
+          "id": "vtx"
+        }
+      ],
+      "tags": [
+        "dnb",
+        "drumandbass",
+        "electronic"
+      ],
+      "title": "In Threes",
+      "album_id": "in-threes",
+      "track_number": 1,
+      "soundcloud_id": "xxx"
     }
   ],
   "albums": [
     {
       "id": "magnificent_quarters",
       "name": "Magnificent Quarters",
+      "year": "2024",
       "artists": [
         {
           "id": "vitriolix"
@@ -49,6 +77,7 @@
     {
       "id": "in_threes",
       "name": "In Threes",
+      "year": "2024",
       "artists": [
         {
           "id": "vtx"
@@ -58,6 +87,7 @@
     {
       "id": "the_beach",
       "name": "The Beach",
+      "year": "1999",
       "artists": [
         {
           "id": "blue_vitriol"
@@ -68,13 +98,13 @@
   "artists": [
     {
       "id": "vitriolix",
-      "name": "vitriolix",
+      "name": "Vitriolix",
       "slug": "vitriolix"
     },
     {
       "id": "vtx",
       "name": "VTX",
-      "slug": "vitriolix"
+      "slug": "vtx"
     },
     {
       "id": "blue_vitriol",

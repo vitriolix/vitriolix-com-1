@@ -20,18 +20,24 @@ export default function Home() {
         </h1>
         <p>i make <a href="https://soundcloud.com/vitriolix"><b>music</b></a> and <a href="https://github.com/vitriolix"><b>code</b> and music code</a></p>
 
+        {console.debug("about to dump songs")}
         {library.songs.map((song, index) => (
+          song.released &&
           <p key={index}>
-            <a href={"https://soundcloud.com/" + getArtistById(song.artists[0].id).slug + "/" + song.slug}>{getArtistById(song.artists[0].id).name} - {song.title} →</a>
+            {console.debug("  song:" + JSON.stringify(song, null, 2))}
+            <a href={"https://soundcloud.com/vitriolix/" + song.slug}>{getArtistById(song.artists[0].id).name}: {song.title} ({song.year}) →</a>
             <iframe width="500" height="166" scrolling="no" frameBorder="no" allow="autoplay" key={index}
-                  src={"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + song.soundcloud_id + "&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"}></iframe>
+                    src={"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + song.soundcloud_id + "&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"}></iframe>
           </p>
         ))}
+
+        <p>Blue Vitriol: The Beach EP (2000)→</p>
+        <iframe src="https://archive.org/embed/XPR.MP3.001_Blue_Vitriol_-_The_Beach_EP_1999" width="500" height="60"
+                frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen></iframe>
       </main>
 
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+        <a className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://mastodon.social/@vitriolix"
           target="_blank"
           rel="noopener noreferrer">
