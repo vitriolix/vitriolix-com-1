@@ -20,7 +20,7 @@ export default function Home() {
         </h1>
         <p>i make <a href="https://soundcloud.com/vitriolix"><b>music</b></a> and <a href="https://github.com/vitriolix"><b>code</b> and music code</a></p>
 
-        {console.debug("about to dump songs")}
+        {/*{console.log("about to dump songs")}*/}
         {library.songs.map((song, index) => (
           song.released &&
           <p key={index}>
