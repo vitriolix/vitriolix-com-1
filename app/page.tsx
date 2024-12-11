@@ -41,7 +41,7 @@ export default function Home() {
 
         <a href="https://archive.org/details/XPR.MP3.001_Blue_Vitriol_-_The_Beach_EP_1999" target={"_blank"}>Blue Vitriol: The Beach EP (2000) →</a>
           <iframe src="https://archive.org/embed/XPR.MP3.001_Blue_Vitriol_-_The_Beach_EP_1999" width="500" height="60"
-                frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen></iframe>
+                frameBorder="0" allowFullScreen></iframe>
       </main>
 
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
