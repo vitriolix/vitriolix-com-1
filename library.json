@@ -68,6 +68,7 @@
       "id": "magnificent_quarters",
       "name": "Magnificent Quarters",
       "year": "2024",
+      "released": false,
       "artists": [
         {
           "id": "vitriolix"
@@ -82,12 +83,19 @@
         {
           "id": "vtx"
         }
+      ],
+      "songs": [
+        {
+          "id": "in_threes"
+        }
       ]
     },
     {
       "id": "the_beach",
       "name": "The Beach",
       "year": "1999",
+      "soundcloud_id": "",
+      "url": "https://archive.org/embed/XPR.MP3.001_Blue_Vitriol_-_The_Beach_EP_1999",
       "artists": [
         {
           "id": "blue_vitriol"

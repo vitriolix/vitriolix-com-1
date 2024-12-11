@@ -1,12 +1,48 @@
 import library from "../library.json"
 
-type AppProps = { message: string }
+type Artist = { id: string, name:string }
+type Song = { soundcloud_id: number, title: string, url: string, artists: Artist[], year: number, service: string }
 
-function Log(props: AppProps) {
+type SongProps = { song: Song }
+type LogProps = { message: string }
+
+
+function SongEmbed(props: SongProps) {
+  if (props.song.service === "soundcloud") {
+    return (<SoundCloud song={props.song as Song}/>)
+  } else if (props.song.service === "archive_org") {
+    return (<ArchiveOrg song={props.song as Song} />)
+  }
+}
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function Log(props: LogProps) {
   console.log(props.message)
   return ""
 }
 
+function SoundCloud(props: SongProps) {
+  console.log("props.song.soundcloud_id: " + props.song.soundcloud_id as number)
+  return (
+    <div>
+    <a href={props.song.url} target="_blank">{getArtistById(props.song.artists[0].id).name}: {props.song.title} ({props.song.year}) →</a>
+    <iframe width="500" height="166" scrolling="no" frameBorder="no" allow="autoplay"
+          src={"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + props.song.soundcloud_id as number + "&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"}></iframe>
+    </div>
+  )
+}
+
+function ArchiveOrg(props: SongProps) {
+  return (
+    <div>
+      {/*<a href={props.song.url} target={"_blank"}>Blue Vitriol: The Beach EP (2000) →</a>*/}
+      <a href={props.song.url}
+         target="_blank">{getArtistById(props.song.artists[0].id).name}: {props.song.title} ({props.song.year}) →</a>
+      <iframe src="https://archive.org/embed/XPR.MP3.001_Blue_Vitriol_-_The_Beach_EP_1999" width="500" height="60"
+              frameBorder="0" allowFullScreen></iframe>
+    </div>
+  )
+}
 
 function getArtistById(id: string) {
   // console.log("artist id: " + id)
@@ -17,6 +53,7 @@ function getArtistById(id: string) {
   }
   return library.artists[0]
 }
+
 export default function Home() {
   return (
     <div
@@ -28,20 +65,12 @@ export default function Home() {
         </h1>
         <p>i make <a href="https://soundcloud.com/vitriolix"><b>music</b></a> and <a href="https://github.com/vitriolix"><b>code</b> and music code</a></p>
 
-        <Log message={"about to dump songs"} />
         {library.songs.map((song, index) => (
           song.released &&
-          <p key={index}>
-            <Log message={"  song:" + JSON.stringify(song, null, 2)} />
-            <a href={"https://soundcloud.com/vitriolix/" + song.slug} target="_blank">{getArtistById(song.artists[0].id).name}: {song.title} ({song.year}) →</a>
-            <iframe width="500" height="166" scrolling="no" frameBorder="no" allow="autoplay" key={index}
-                    src={"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + song.soundcloud_id + "&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"}></iframe>
-          </p>
+          <div key={index}>
+            <SongEmbed song={song as Song} />
+          </div>
         ))}
-
-        <a href="https://archive.org/details/XPR.MP3.001_Blue_Vitriol_-_The_Beach_EP_1999" target={"_blank"}>Blue Vitriol: The Beach EP (2000) →</a>
-          <iframe src="https://archive.org/embed/XPR.MP3.001_Blue_Vitriol_-_The_Beach_EP_1999" width="500" height="60"
-                frameBorder="0" allowFullScreen></iframe>
       </main>
 
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
