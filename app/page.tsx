@@ -33,14 +33,14 @@ export default function Home() {
           song.released &&
           <p key={index}>
             <Log message={"  song:" + JSON.stringify(song, null, 2)} />
-            <a href={"https://soundcloud.com/vitriolix/" + song.slug}>{getArtistById(song.artists[0].id).name}: {song.title} ({song.year}) →</a>
+            <a href={"https://soundcloud.com/vitriolix/" + song.slug} target="_blank">{getArtistById(song.artists[0].id).name}: {song.title} ({song.year}) →</a>
             <iframe width="500" height="166" scrolling="no" frameBorder="no" allow="autoplay" key={index}
                     src={"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + song.soundcloud_id + "&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"}></iframe>
           </p>
         ))}
 
-        <p>Blue Vitriol: The Beach EP (2000)→</p>
-        <iframe src="https://archive.org/embed/XPR.MP3.001_Blue_Vitriol_-_The_Beach_EP_1999" width="500" height="60"
+        <a href="https://archive.org/details/XPR.MP3.001_Blue_Vitriol_-_The_Beach_EP_1999" target={"_blank"}>Blue Vitriol: The Beach EP (2000) →</a>
+          <iframe src="https://archive.org/embed/XPR.MP3.001_Blue_Vitriol_-_The_Beach_EP_1999" width="500" height="60"
                 frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen></iframe>
       </main>
 
