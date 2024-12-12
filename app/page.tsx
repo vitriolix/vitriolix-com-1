@@ -8,6 +8,7 @@ type LogProps = { message: string }
 
 
 function SongEmbed(props: SongProps) {
+  // console.log("song: " + JSON.stringify(props.song))
   if (props.song.service === "soundcloud") {
     return (<SoundCloud song={props.song as Song}/>)
   } else if (props.song.service === "archive_org") {
@@ -22,12 +23,12 @@ function Log(props: LogProps) {
 }
 
 function SoundCloud(props: SongProps) {
-  console.log("props.song.soundcloud_id: " + props.song.soundcloud_id as number)
+  // console.log("props.song.soundcloud_id: " + props.song.soundcloud_id)
   return (
     <div>
     <a href={props.song.url} target="_blank">{getArtistById(props.song.artists[0].id).name}: {props.song.title} ({props.song.year}) →</a>
     <iframe width="500" height="166" scrolling="no" frameBorder="no" allow="autoplay"
-          src={"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + props.song.soundcloud_id as number + "&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"}></iframe>
+          src={"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + props.song.soundcloud_id + "&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"}></iframe>
     </div>
   )
 }

@@ -3,12 +3,14 @@
     {
       "id": "haters",
       "slug": "haters",
-      "year": "2024",
+      "year": 2024,
       "released": true,
       "service": "soundcloud",
+      "url": "https://soundcloud.com/vitriolix/haters",
       "artists": [
         {
-          "id": "vitriolix"
+          "id": "vitriolix",
+          "name": "Vitriolix"
         }
       ],
       "tags": [
@@ -24,12 +26,14 @@
     {
       "id": "backache",
       "slug": "backache",
-      "year": "2024",
+      "year": 2024,
       "released": true,
       "service": "soundcloud",
+      "url": "https://soundcloud.com/vitriolix/backache",
       "artists": [
         {
-          "id": "vtx"
+          "id": "vtx",
+          "name": "VTX"
         }
       ],
       "tags": [
@@ -44,12 +48,14 @@
     {
       "id": "in_threes",
       "slug": "in-threes",
-      "year": "2024",
+      "year": 2024,
       "released": false,
       "service": "soundcloud",
+      "url": "https://soundcloud.com/vitriolix/in-threes",
       "artists": [
         {
-          "id": "vtx"
+          "id": "vtx",
+          "name": "VTX"
         }
       ],
       "tags": [
@@ -60,14 +66,14 @@
       "title": "In Threes",
       "album_id": "in-threes",
       "track_number": 1,
-      "soundcloud_id": "xxx"
+      "soundcloud_id": 99999999
     }
   ],
   "albums": [
     {
       "id": "magnificent_quarters",
       "name": "Magnificent Quarters",
-      "year": "2024",
+      "year": 2024,
       "released": false,
       "artists": [
         {
@@ -78,7 +84,7 @@
     {
       "id": "in_threes",
       "name": "In Threes",
-      "year": "2024",
+      "year": 2024,
       "artists": [
         {
           "id": "vtx"
