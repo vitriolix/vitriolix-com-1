@@ -1,8 +1,8 @@
 import library from "../library.json"
 
 type Artist = { id: string, name: string }
-type Album = { id: string, title: string, year: number, songs: Song[], artists: Artist[], service: string, url:string }
-type Song = { soundcloud_id: number, title: string, url: string, artists: Artist[], year: number, service: string }
+type Album = { id: string, title: string, year: number, songs: Song[], artists: Artist[], service: string, url: string, slug: string, released: boolean }
+type Song = { soundcloud_id: number, title: string, url: string, slug: string, artists: Artist[], year: number, service: string, album: string, released: boolean}
 
 type AlbumProps = { album: Album }
 type SongProps = { song: Song }
@@ -10,11 +10,11 @@ type LogProps = { message: string }
 
 
 function SongEmbed(props: SongProps) {
-  // console.log("song: " + JSON.stringify(props.song))
   if (props.song.service === "soundcloud") {
     return (<SoundCloud song={props.song as Song}/>)
   } else if (props.song.service === "archive_org") {
-    return (<ArchiveOrgAlbum song={props.song as Song}/>)
+    // return (<ArchiveOrgAlbum album={props.song.album as Album}/>)
+    return <div />
   }
 }
 
@@ -54,7 +54,7 @@ function SoundCloudAlbum(props: AlbumProps) {
          target="_blank">{getArtistById(props.album.artists[0].id).name}: {props.album.title} ({props.album.year}) →</a>
       {/*<iframe width="500" height="166" scrolling="no" frameBorder="no" allow="autoplay"*/}
       {/*        src={"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + props.song.soundcloud_id + "&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"}></iframe>*/}
-      <iframe  height="300" width="500px" scrolling="no" frameBorder="no" allow="autoplay"
+      <iframe height="300" width="500px" scrolling="no" frameBorder="no" allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1915997203%3Fsecret_token%3Ds-2tuvm0pbFqI&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
       <div
         style={{fontSize: "10px", color: "#cccccc", lineBreak: "anywhere", wordBreak: "normal", overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis", fontFamily: "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif",fontWeight: 100}}>
@@ -72,10 +72,9 @@ function ArchiveOrgAlbum(props: AlbumProps) {
   return (
     <div>
       {/*<a href={props.song.url} target={"_blank"}>Blue Vitriol: The Beach EP (2000) →</a>*/}
-      <a href={props.album.url}
+      <a href={"https://archive.org/details/" + props.album.slug}
          target="_blank">{getArtistById(props.album.artists[0].id).name}: {props.album.title} ({props.album.year}) →</a>
-      <iframe src={props.album.url} width="500" height="60"
-              frameBorder="0" allowFullScreen></iframe>
+      <iframe src={"https://archive.org/embed/" + props.album.slug} width="500" height="60" frameBorder="0" allowFullScreen></iframe>
     </div>
   )
 }
@@ -102,7 +101,8 @@ export default function Home() {
         <p>i make <a href="https://soundcloud.com/vitriolix"><b>music</b></a> and <a
           href="https://github.com/vitriolix"><b>code</b> and music code</a></p>
 
-        <h3>Songs</h3>
+        <b>Songs</b>
+
         {library.songs.map((song, index) => (
           song.released &&
           <div key={index}>
@@ -110,7 +110,8 @@ export default function Home() {
           </div>
         ))}
 
-        <h3>Albums / EPs</h3>
+        <b>Albums / EPs</b>
+
         {library.albums.map((album, index) => (
           album.released &&
           <div key={index}>

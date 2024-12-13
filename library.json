@@ -11,7 +11,8 @@
       "artists": [
         {
           "id": "vitriolix",
-          "name": "Vitriolix"
+          "name": "Vitriolix",
+          "slug": "vitriolix"
         }
       ],
       "tags": [
@@ -20,7 +21,6 @@
         "electronic"
       ],
       "title": "Haters",
-      "album_id": "magnificent_quarters",
       "track_number": 1,
       "soundcloud_id": 1926365390
     },
@@ -31,11 +31,11 @@
       "released": true,
       "service": "soundcloud",
       "url": "https://soundcloud.com/vitriolix/backache",
-      "album": "",
       "artists": [
         {
           "id": "vtx",
-          "name": "VTX"
+          "name": "VTX",
+          "slug": "vtx"
         }
       ],
       "tags": [
@@ -43,7 +43,7 @@
         "electronic"
       ],
       "title": "Backache",
-      "album_id": "backache",
+      "album": "backache",
       "track_number": 1,
       "soundcloud_id": 1932470609
     },
@@ -57,7 +57,8 @@
       "artists": [
         {
           "id": "vtx",
-          "name": "VTX"
+          "name": "VTX",
+          "slug": "vtx"
         }
       ],
       "tags": [
@@ -69,6 +70,30 @@
       "album": "in_threes",
       "track_number": 1,
       "soundcloud_id": 99999999
+    },
+    {
+      "id": "pomponio",
+      "slug": "pomponio",
+      "year": 2024,
+      "released": false,
+      "service": "soundcloud",
+      "url": "https://soundcloud.com/vitriolix/pomponio",
+      "artists": [
+        {
+          "id": "blue_vitriol",
+          "name": "Blue Vitriol",
+          "slug": "blue-vitriol"
+        }
+      ],
+      "tags": [
+        "dnb",
+        "drumandbass",
+        "electronic"
+      ],
+      "title": "Pomponio",
+      "album": "the_beach",
+      "track_number": 1,
+      "soundcloud_id": 99999999
     }
   ],
   "albums": [
@@ -78,10 +103,39 @@
       "year": 2024,
       "released": true,
       "service": "soundcloud",
-      "url": "https://soundcloud.com/vitriolix/sets/magnificent-quarters",
+      "url": "https://archive.org/details/XPR.MP3.001_Blue_Vitriol_-_The_Beach_EP_1999",
+      "slug": "magnificent-quarters",
       "artists": [
         {
-          "id": "vitriolix"
+          "id": "vitriolix",
+          "name": "Vitriolix",
+          "slug": "vitriolix"
+        }
+      ],
+      "songs": [
+          {
+          "id": "haters",
+          "slug": "haters",
+          "year": 2024,
+          "released": true,
+          "service": "soundcloud",
+          "url": "https://soundcloud.com/vitriolix/haters",
+          "album": "haters",
+          "artists": [
+            {
+              "id": "vitriolix",
+              "name": "Vitriolix",
+              "slug": "vitriolix"
+            }
+          ],
+          "tags": [
+            "idm",
+            "electro",
+            "electronic"
+          ],
+          "title": "Haters",
+          "track_number": 1,
+          "soundcloud_id": 1926365390
         }
       ]
     },
@@ -91,28 +145,81 @@
       "year": 2024,
       "service": "soundcloud",
       "url": "https://soundcloud.com/vitriolix/sets/in-threes",
+      "slug": "in-threes",
+      "released": false,
       "artists": [
         {
-          "id": "vtx"
+          "id": "vtx",
+          "slug": "vtx",
+          "name": "VTX"
         }
       ],
       "songs": [
         {
-          "id": "in_threes"
+          "id": "in_threes",
+          "slug": "in_threes",
+          "year": 2024,
+          "released": false,
+          "service": "soundcloud",
+          "url": "https://soundcloud.com/vitriolix/in-threes",
+          "artists": [
+            {
+              "id": "vtx",
+              "name": "VTX",
+              "slug": "vtx"
+            }
+          ],
+          "tags": [
+            "dnb",
+            "drumandbass",
+            "electronic"
+          ],
+          "title": "In Threes",
+          "album": "in_threes",
+          "track_number": 1,
+          "soundcloud_id": 99999999
         }
       ]
     },
     {
       "id": "the_beach",
       "title": "The Beach",
-      "year": "1999",
-      "soundcloud_id": "",
+      "year": 1999,
       "released": true,
       "service": "archive_org",
-      "url": "https://archive.org/embed/XPR.MP3.001_Blue_Vitriol_-_The_Beach_EP_1999",
+      "slug": "XPR.MP3.001_Blue_Vitriol_-_The_Beach_EP_1999",
+      "url": "https://archive.org/details/XPR.MP3.001_Blue_Vitriol_-_The_Beach_EP_1999",
+      "songs": [
+        {
+          "id": "pomponio",
+          "slug": "pomponio",
+          "year": 2024,
+          "released": false,
+          "service": "soundcloud",
+          "url": "https://soundcloud.com/vitriolix/pomponio",
+          "artists": [
+            {
+              "id": "blue_vitriol",
+              "name": "Blue Vitriol",
+              "slug": "blue-vitriol"
+            }
+          ],
+          "tags": [
+            "dnb",
+            "drumandbass",
+            "electronic"
+          ],
+          "title": "Pomponio",
+          "album": "the_beach",
+          "track_number": 1,
+          "soundcloud_id": 99999999
+        }
+      ],
       "artists": [
         {
-          "id": "blue_vitriol"
+          "id": "blue_vitriol",
+          "name": "Blue Vitriol",
+          "slug": "blue-vitriol"
         }
       ]
     }
