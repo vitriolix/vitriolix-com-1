@@ -7,6 +7,7 @@
       "released": true,
       "service": "soundcloud",
       "url": "https://soundcloud.com/vitriolix/haters",
+      "album": "haters",
       "artists": [
         {
           "id": "vitriolix",
@@ -30,6 +31,7 @@
       "released": true,
       "service": "soundcloud",
       "url": "https://soundcloud.com/vitriolix/backache",
+      "album": "",
       "artists": [
         {
           "id": "vtx",
@@ -47,7 +49,7 @@
     },
     {
       "id": "in_threes",
-      "slug": "in-threes",
+      "slug": "in_threes",
       "year": 2024,
       "released": false,
       "service": "soundcloud",
@@ -64,7 +66,7 @@
         "electronic"
       ],
       "title": "In Threes",
-      "album_id": "in-threes",
+      "album": "in_threes",
       "track_number": 1,
       "soundcloud_id": 99999999
     }
@@ -72,9 +74,11 @@
   "albums": [
     {
       "id": "magnificent_quarters",
-      "name": "Magnificent Quarters",
+      "title": "Magnificent Quarters",
       "year": 2024,
-      "released": false,
+      "released": true,
+      "service": "soundcloud",
+      "url": "https://soundcloud.com/vitriolix/sets/magnificent-quarters",
       "artists": [
         {
           "id": "vitriolix"
@@ -83,8 +87,10 @@
     },
     {
       "id": "in_threes",
-      "name": "In Threes",
+      "title": "In Threes",
       "year": 2024,
+      "service": "soundcloud",
+      "url": "https://soundcloud.com/vitriolix/sets/in-threes",
       "artists": [
         {
           "id": "vtx"
@@ -98,9 +104,11 @@
     },
     {
       "id": "the_beach",
-      "name": "The Beach",
+      "title": "The Beach",
       "year": "1999",
       "soundcloud_id": "",
+      "released": true,
+      "service": "archive_org",
       "url": "https://archive.org/embed/XPR.MP3.001_Blue_Vitriol_-_The_Beach_EP_1999",
       "artists": [
         {
