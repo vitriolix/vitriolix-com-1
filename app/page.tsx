@@ -1,4 +1,5 @@
 import library from "../library.json"
+import ReactPlayer from 'react-player'
 
 type Artist = { id: string, name: string }
 type Album = { id: string, title: string, year: number, songs: Song[], artists: Artist[], service: string, url: string, slug: string, released: boolean }
@@ -74,6 +75,7 @@ function ArchiveOrgAlbum(props: AlbumProps) {
       {/*<a href={props.song.url} target={"_blank"}>Blue Vitriol: The Beach EP (2000) →</a>*/}
       <a href={"https://archive.org/details/" + props.album.slug}
          target="_blank">{getArtistById(props.album.artists[0].id).name}: {props.album.title} ({props.album.year}) →</a>
+      <img src={"https://ia800208.us.archive.org/11/items/XPR.MP3.001_Blue_Vitriol_-_The_Beach_EP_1999/Blue_Vitriol_The_Beach_EP_1999__Front_Cover.jpg"} width={"500px"} />
       <iframe src={"https://archive.org/embed/" + props.album.slug} width="500" height="60" frameBorder="0" allowFullScreen></iframe>
     </div>
   )
@@ -119,6 +121,7 @@ export default function Home() {
           </div>
         ))}
 
+        {/*<ReactPlayer url='https://www.youtube.com/watch?v=LXb3EKWsInQ' />*/}
 
       </main>
 
